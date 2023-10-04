@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="text-align:center">
+    <div class="search-container">
+        <input type="text" id="search-input" [(ngModel)]="searchText" placeholder="Search...">
+        <button type="submit" class="search-button">
+            <i class="fa fa-search" (click)="callapi()"></i>
+        </button>
+    </div>
+
+    <div style="margin-top:15px">
+        <b *ngIf="temp">{{temp}} °F</b><br>
+        <b style="font-style: oblique;font-size: xx-large;">{{weather}}</b>
+    </div>
+</body>
+</html>
